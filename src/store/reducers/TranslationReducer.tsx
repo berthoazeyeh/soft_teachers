@@ -10,7 +10,7 @@ interface TranslationState {
 
 const getDeviceLanguage = () => {
   if (Platform.OS === 'ios') {
-    return NativeModules?.SettingsManager?.settings?.AppleLocale || NativeModules?.SettingsManager?.settings?.AppleLanguages[0]; // Langue iOS
+    return "en"
   } else {
     return NativeModules.I18nManager.localeIdentifier; // Langue Android
   }
